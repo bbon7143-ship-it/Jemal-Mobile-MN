@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jemal Mobile MN</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f9fc;--card:#fff;--text:#14213d;--muted:#5b6785;--acc:#0a7cff;--acc2:#00c2a8;--line:#e3e8f1;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1020;--card:#151c33;--text:#eef2ff;--muted:#a3adc9;--line:#26304f;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0b1020;--card:#151c33;--text:#eef2ff;--muted:#a3adc9;--line:#26304f;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:'Poppins','Noto Sans Ethiopic',system-ui,sans-serif;line-height:1.6}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;z-index:5;flex-wrap:wrap}
+.logo{font-weight:700;font-size:1.05rem}.logo span{color:var(--acc)}
+.lang{display:flex;gap:6px}
+.lang button{border:1px solid var(--line);background:var(--card);color:var(--text);padding:6px 12px;border-radius:20px;font:inherit;font-size:.82rem;cursor:pointer}
+.lang button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.hero{padding:56px 20px;text-align:center;background:linear-gradient(135deg,var(--acc),var(--acc2));color:#fff}
+.hero h1{font-size:clamp(2rem,8vw,3.2rem);margin:0 0 10px}
+.hero p{max-width:520px;margin:0 auto 22px;opacity:.95}
+.btn{display:inline-block;background:#fff;color:#0a4fb3;padding:12px 26px;border-radius:30px;font-weight:700;text-decoration:none}
+section{padding:44px 20px;max-width:960px;margin:auto}
+h2{text-align:center;margin:0 0 24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;text-align:center}
+.card .i{font-size:2rem}.card h3{margin:8px 0 4px}.card p{margin:0;color:var(--muted);font-size:.92rem}
+.contact{text-align:center}.contact a{color:var(--acc);font-weight:700;text-decoration:none}
+footer{text-align:center;padding:22px;color:var(--muted);border-top:1px solid var(--line);font-size:.85rem}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">Jemal <span>Mobile</span> MN</div>
+<div class="lang"><button data-l="en">English</button><button data-l="am">አማርኛ</button><button data-l="om">Afaan Oromoo</button></div>
+</header>
+<div class="hero">
+<h1>Jemal Mobile MN</h1>
+<p data-t="tag"></p>
+<a class="btn" href="#contact" data-t="cta"></a>
+</div>
+<section id="services">
+<h2 data-t="svc"></h2>
+<div class="grid">
+<div class="card"><div class="i">📱</div><h3 data-t="s1"></h3><p data-t="d1"></p></div>
+<div class="card"><div class="i">🛠️</div><h3 data-t="s2"></h3><p data-t="d2"></p></div>
+<div class="card"><div class="i">🎧</div><h3 data-t="s3"></h3><p data-t="d3"></p></div>
+</div>
+</section>
+<section id="contact" class="contact">
+<h2 data-t="con"></h2>
+<p>📞 <span data-t="ph"></span>: <a href="tel:+251911900377">+251 911 900 377</a></p>
+<p>📍 <span data-t="ad"></span>: <span data-t="loc"></span> · <a href="https://www.google.com/maps?q=7.12355,40.00454" target="_blank" rel="noopener" data-t="map"></a></p>
+<p>🕘 <span data-t="hr"></span>: <span data-t="days"></span> 2:00 – 12:00</p>
+</section>
+<footer data-t="ft"></footer>
+<script>
+var T={
+en:{tag:"New phones, repairs and quality accessories — all in one place with trusted service.",cta:"Contact us now",svc:"Our Services",s1:"Phone Sales",d1:"Brand-new, quality smartphones.",s2:"Phone Repair",d2:"Fast screen, battery and software repair.",s3:"Accessories",d3:"Chargers, earphones, cases and screen protectors.",con:"Contact Us",ph:"Phone",ad:"Address",hr:"Hours",days:"Mon – Sat",loc:"Robe Town, Oromia",map:"View on map",ft:"© 2026 Jemal Mobile MN · All rights reserved"},
+am:{tag:"አዳዲስ ስልኮች፣ ጥገና እና ጥራት ያላቸው መለዋወጫዎች — ሁሉም በአንድ ቦታ በታማኝ አገልግሎት።",cta:"አሁን ያግኙን",svc:"አገልግሎቶቻችን",s1:"የስልክ ሽያጭ",d1:"አዳዲስ እና ጥራት ያላቸው ስማርት ስልኮች።",s2:"የስልክ ጥገና",d2:"ስክሪን፣ ባትሪ እና ሶፍትዌር ጥገና በፍጥነት።",s3:"መለዋወጫዎች",d3:"ቻርጀር፣ ኤርፎን፣ ኬዝ እና ስክሪን ተከላካይ።",con:"ያግኙን",ph:"ስልክ",ad:"አድራሻ",hr:"የሥራ ሰዓት",days:"ሰኞ – ቅዳሜ",loc:"ሮቤ ከተማ፣ ኦሮሚያ",map:"በካርታ ይመልከቱ",ft:"© 2026 Jemal Mobile MN · ሁሉም መብቱ የተጠበቀ ነው"},
+om:{tag:"Bilbila haaraa, suphaa fi meeshaalee dabalataa qulqullina qabanii — hundi iddoo tokkotti, tajaajila amanamaan.",cta:"Amma nu qunnamaa",svc:"Tajaajiloota Keenya",s1:"Gurgurtaa Bilbilaa",d1:"Bilbila smart haaraa fi qulqullina qabu.",s2:"Suphaa Bilbilaa",d2:"Suphaa iskiriinii, baatrii fi sooftiweerii saffisaan.",s3:"Meeshaalee Dabalataa",d3:"Chaarjara, ear-phone, kesii fi eegduu iskiriinii.",con:"Nu Qunnamaa",ph:"Bilbila",ad:"Teessoo",hr:"Sa'aatii Hojii",days:"Wiixata – Sanbata",loc:"Magaalaa Roobee, Oromiyaa",map:"Kaartaa irratti ilaaluu",ft:"© 2026 Jemal Mobile MN · Mirgi hundi eegameera"}
+};
+function setL(l){
+ document.documentElement.lang=l==="om"?"om":l;
+ document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=T[l][e.dataset.t]});
+ document.querySelectorAll(".lang button").forEach(function(b){b.classList.toggle("on",b.dataset.l===l)});
+ try{localStorage.setItem("jm-lang",l)}catch(e){}
+}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){setL(b.dataset.l)}});
+var s=null;try{s=localStorage.getItem("jm-lang")}catch(e){}
+setL(T[s]?s:"en");
+</script>
+</body>
+</html>
